@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin - Restaurante Sabor Caseiro</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body> 
+
+  <header>
+    <h1>Área do Administrador</h1>
+    <a href="index.html" class="voltar-btn">← Voltar para o site</a>
+  </header>
+
+  <main>
+    <!-- Login -->
+    <div id="login-form" class="admin-container">
+      <h2>Login</h2>
+      <input type="text" id="username" placeholder="Usuário" />
+      <input type="password" id="password" placeholder="Senha" />
+      <button onclick="login()">Entrar</button>
+      <p id="login-error" class="error-msg"></p>
+    </div>
+
+    <!-- Painel Admin -->
+    <div id="admin-panel" class="admin-container hidden">
+      <h2>Gerenciar Cardápio</h2>
+      <ul id="edit-menu-list"></ul>
+
+      <h3>Adicionar novo prato</h3>
+      <input type="text" id="new-name" placeholder="Nome do prato" />
+      <input type="text" id="new-desc" placeholder="Descrição do prato" />
+      <input type="text" id="new-img" placeholder="URL da imagem (ex: imagens/arroz.jpg)" />
+      <button onclick="addMenuItem()">Adicionar</button>
+
+      <p id="save-msg" class="success-msg"></p>
+    </div>
+  </main>
+
+  <footer>
+     Restaurante Santa Monica — Administração
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
